@@ -1,0 +1,50 @@
+﻿using Prism;
+using Prism.Ioc;
+using QFXamApp.ViewModels;
+using QFXamApp.Views;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using Prism.Unity;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+namespace QFXamApp
+{
+    public partial class App : PrismApplication
+    {
+        /* 
+         * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
+         * This imposes a limitation in which the App class must have a default constructor. 
+         * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
+         */
+        public App() : this(null) { }
+
+        public App(IPlatformInitializer initializer) : base(initializer) { }
+
+        protected override async void OnInitialized()
+        {
+            InitializeComponent();
+
+            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+        }
+
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();            
+            containerRegistry.RegisterForNavigation<EducationalLevelListPage, EducationalLevelListPageViewModel>();
+            containerRegistry.RegisterForNavigation<EducationalLevelPage, EducationalLevelPageViewModel>();
+            containerRegistry.RegisterForNavigation<EducationalSectorListPage, EducationalSectorListPageViewModel>();
+            containerRegistry.RegisterForNavigation<EducationalSectorPage, EducationalSectorPageViewModel>();
+            containerRegistry.RegisterForNavigation<AwardingBodyListPageView, AwardingBodyListPageViewModel>();
+            containerRegistry.RegisterForNavigation<AwardingBodyPage, AwardingBodyPageViewModel>();
+            containerRegistry.RegisterForNavigation<QualificationTypeListPage, QualificationTypeListPageViewModel>();
+            containerRegistry.RegisterForNavigation<QualificationListPage, QualificationListPageViewModel>();
+            containerRegistry.RegisterForNavigation<QualificationPage, QualificationPageViewModel>();
+            containerRegistry.RegisterForNavigation<SearchPage, SearchPageViewModel>();
+
+            
+
+
+        }
+    }
+}

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QFXamApp.Views.EducationalLevelPage"
+             Title="{Binding Title}">
+    <ScrollView>
+
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition   Height="Auto" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>-->
+        <StackLayout  Padding="0" Orientation="Vertical">
+            <Grid Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition   Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+
+                </Grid.RowDefinitions>
+                <Entry Grid.Row="0" Text="{Binding EducationalLevel.ActiveLanguage.Name}" IsEnabled="False"></Entry>
+                <Label  Grid.Row="1" Text="Γνώσεις" ></Label>
+                <Editor   Grid.Row="2" Text="{Binding EducationalLevel.ActiveLanguage.Knowledge}" IsEnabled="False" VerticalOptions="FillAndExpand"  ></Editor>
+                <Label Grid.Row="3" Text="Δεξιότητες"></Label>
+                <Editor  Grid.Row="4" Text="{Binding EducationalLevel.ActiveLanguage.Skills}" IsEnabled="False" VerticalOptions="FillAndExpand"   ></Editor>
+                <Label Grid.Row="5" Text="Ικανότητες"></Label>
+                    <Editor  Grid.Row="6"  Text="{Binding EducationalLevel.ActiveLanguage.Competence}" IsEnabled="False" VerticalOptions="Fill" ></Editor>
+
+            </Grid>
+        </StackLayout>
+
+        <!--<StackLayout  Padding="15"  Orientation="Vertical" >
+                <Label Text="Γνώσεις"></Label>
+                <Editor  Text="{Binding EducationalLevel.ActiveLanguage.Knowledge}" IsEnabled="False" VerticalOptions="FillAndExpand"  ></Editor>
+            </StackLayout>-->
+
+        <!--<StackLayout Grid.Row="2" Padding="15"  Orientation="Vertical">
+                <Label Text="Δεξιότητες"></Label>
+                <Editor  Text="{Binding EducationalLevel.ActiveLanguage.Skills}" IsEnabled="False" VerticalOptions="FillAndExpand" MinimumHeightRequest="170"  ></Editor>
+            </StackLayout >
+            <StackLayout Grid.Row="3" Padding="15" Orientation="Vertical">
+                <Label Text="Ικανότητες"></Label>
+                <Editor  Text="{Binding EducationalLevel.ActiveLanguage.Competence}" IsEnabled="False" VerticalOptions="FillAndExpand" MinimumHeightRequest="170"></Editor>
+            </StackLayout>-->
+        <!--</Grid>-->
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QFXamApp.Views.AwardingBodyPage"
+             Title="{Binding Title}">
+    <ScrollView>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="400" />
+
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Padding="15">
+                <Label Text="URL"></Label>
+                <Entry Text="{Binding AwardingBody.ActiveLanguage.Url}" IsEnabled="False"></Entry>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Padding="15">
+                <Label Text="Ονομασία"></Label>
+                <Editor  Text="{Binding AwardingBody.ActiveLanguage.Name}" IsEnabled="False" VerticalOptions="FillAndExpand" ></Editor>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

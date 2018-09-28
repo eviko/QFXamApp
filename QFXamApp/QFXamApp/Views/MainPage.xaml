@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QFXamApp.Views.MainPage"
+             Title="{Binding Title}">
+
+    <!--<StackLayout  Grid.Row="3" Spacing="0" Padding="0" Margin="0" VerticalOptions="FillAndExpand">
+        <Image Grid.Row="0"  BackgroundColor="#5469A4" Source="logobanner.png"/>
+
+        <Grid  Padding="0"  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="2" BackgroundColor ="#71707D" Image="categories2.png" ContentLayout="Top,10"  TextColor="White" Text="Επίπεδα Προσόντων" Command="{Binding OnNavigateCommand}" CommandParameter="EducationalLevelListPage"/>
+        </Grid>
+        <Grid  Padding="0"  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="2" BackgroundColor ="#71707D" Image="categories2.png" ContentLayout="Top,10"  TextColor="White" Text="Τομείς Εκπαίδευσης" Command="{Binding OnNavigateCommand}" CommandParameter="EducationalSectorListPage"/>
+        </Grid>
+
+        <Grid Padding="0"  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"  BackgroundColor="#4EA0CE" Image="hotdiscussions2.png" ContentLayout="Top,10"  TextColor="White" Text="Φορείς Χορήγησης" Command="{Binding OnNavigateCommand}" CommandParameter="AwardingBodyListPageView"/>
+        </Grid>
+        <Grid Padding="0"  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"  BackgroundColor="#BBC5B0" Image="organisations.png" ContentLayout="Top,10" TextColor="White" Text="Τύποι Προσόντων" Command="{Binding OnNavigateCommand}" CommandParameter="QualificationTypeListPage"/>
+
+
+        </Grid>
+        <Grid Padding="0"  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"  BackgroundColor="#BBC5B0" Image="organisations.png" ContentLayout="Top,10" TextColor="White" Text="Προσόντα" Command="{Binding OnNavigateCommand}" CommandParameter="QualificationListPage"/>
+
+
+        </Grid>
+        <Grid Padding="0"  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"  BackgroundColor="#BBC5B0" Image="organisations.png" ContentLayout="Top,10" TextColor="White" Text="Αναζήτηση" Command="{Binding OnNavigateCommand}" CommandParameter="SearchPage"/>
+
+
+        </Grid>
+    </StackLayout>-->
+
+
+
+
+    <StackLayout  Grid.Row="3" Spacing="0" Padding="0" Margin="0" VerticalOptions="FillAndExpand">
+        <Image Grid.Row="0"  BackgroundColor="#C47C1F" Source="logobanner.png"/>
+
+        <Grid  Padding="0"  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button HeightRequest="100" Grid.Column="0" Grid.Row="2" BackgroundColor ="#455A63" ContentLayout="Top,10"  TextColor="White" Text="Επίπεδα Προσόντων" Command="{Binding OnNavigateCommand}" CommandParameter="EducationalLevelListPage"/>
+            <Button HeightRequest="100" Grid.Column="1"  Grid.Row="2" BackgroundColor="#455A63" Image="recent.png" ContentLayout="Top,10" TextColor="White" Text="Τομείς Εκπαίδευσης" Command="{Binding OnNavigateCommand}" CommandParameter="EducationalSectorListPage"/>
+        </Grid>
+
+        <Grid Padding="0"  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button HeightRequest="100" Grid.Column="0"  BackgroundColor="#455A63" ContentLayout="Top,10"  TextColor="White" Text="Φορείς Χορήγησης" Command="{Binding OnNavigateCommand}" CommandParameter="AwardingBodyListPageView"/>
+            <Button HeightRequest="100" Grid.Column="1"  BackgroundColor="#455A63"  ContentLayout="Top,10" TextColor="White" Text="Τύποι Προσόντων" Command="{Binding OnNavigateCommand}" CommandParameter="QualificationTypeListPage"/>
+        </Grid>
+        <Grid Padding="0"  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!--<Button Grid.Column="0"  BackgroundColor="#455A63"  ContentLayout="Top,10" TextColor="White" Text="Προσόντα" Command="{Binding OnNavigateCommand}" CommandParameter="QualificationListPage"/>-->
+            <Button  HeightRequest="100" BackgroundColor="#455A63"   ContentLayout="Top,10" TextColor="White" Text="Προσόντα" Command="{Binding OnNavigateCommand}" CommandParameter="SearchPage"/>
+
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

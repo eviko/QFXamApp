@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             x:Class="QFXamApp.Views.QualificationListPage">
+    <ListView x:Name="EducationalLevelList" ItemsSource="{Binding Qualifications}" HasUnevenRows="True">
+        <ListView.Header>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Padding="15" Spacing="5">
+                    <Label  Text="Info" FontSize="Large" FontAttributes="Bold" />
+                </StackLayout>
+                <StackLayout Grid.Column="1" Padding="15" Spacing="5">
+                    <Label  Text="Ονομασία" FontSize="Large" FontAttributes="Bold" />
+                </StackLayout>
+            </Grid>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0" Padding="0" Spacing="5" Orientation="Horizontal">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image x:Name="image" Grid.Column="1" Source="info.png" HorizontalOptions="Center" MinimumHeightRequest="40" MinimumWidthRequest="40"  />
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Padding="15" Spacing="5"  >
+                            <Label  Text="{Binding ActiveLanguage.Name}"  FontSize="Medium" />
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Behaviors>
+            <behaviors:EventToCommandBehavior EventName="ItemTapped"                                                 
+                                              Command="{Binding OnItemTappedCommand}" 
+                                              EventArgsParameterPath="Item" />
+        </ListView.Behaviors>
+    </ListView>
+</ContentPage>
+        <!--<ListView.Header>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Padding="15" Spacing="5" >
+                    <Label  Text="Επίπεδο"  FontSize="Medium" FontAttributes="Bold"  />
+                </StackLayout>
+                <StackLayout Grid.Column="1" Padding="15" Spacing="5">
+                    <Label  Text="Τίτλος" FontSize="Medium" FontAttributes="Bold" />
+                </StackLayout>
+            </Grid>
+
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0"  >
+                            <Label  Text="{Binding QualificationType.EducationalLevel.EQFLevel}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontAttributes="Bold" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label  Text="{Binding Languages.Description}" FontSize="Medium" FontAttributes="Bold" />
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Behaviors>
+            <behaviors:EventToCommandBehavior EventName="ItemTapped"                                                 
+                                          Command="{Binding OnItemTappedCommand}" 
+                                          EventArgsParameterPath="Item" />
+        </ListView.Behaviors>
+    </ListView>
+</ContentPage>-->

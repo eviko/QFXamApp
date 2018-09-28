@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QFXamApp.Views.SearchPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Label Text="Επίπεδο Προσόντος"/>
+                <!--educationallevel-->
+                <Picker 
+                SelectedIndex="{Binding EducationalLevelSelectedIndex}"
+                    ItemsSource="{Binding EducationalLevels}" ItemDisplayBinding="{Binding ActiveLanguage.Name}"
+            />
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Label Text="Τομέας Εκπαίδευσης"/>
+                <!--educationalsector-->
+
+                <Picker 
+                SelectedIndex="{Binding EducationalSectorSelectedIndex}"
+                    ItemsSource="{Binding EducationalSectors}" ItemDisplayBinding="{Binding ActiveLanguage.Title}"
+            />
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Label Text="Τύπος Προσόντος"/>
+                <!--qualifictionType--> 
+
+                <Picker 
+                SelectedIndex="{Binding QualificationTypeSelectedIndex}"
+                ItemsSource="{Binding QualificationTypes}" ItemDisplayBinding="{Binding ActiveLanguage.Name}"
+            />
+            </StackLayout>
+            <StackLayout Grid.Row="3">
+                <Label Text="Φορέας Χορήγησης"/>
+                <!--awardingBody-->
+
+                <Picker 
+                SelectedIndex="{Binding AwardingBodySelectedIndex}"
+                ItemsSource="{Binding AwardingBodies}" ItemDisplayBinding="{Binding ActiveLanguage.Name}"
+            />
+            </StackLayout>
+            <StackLayout Grid.Row="4">
+                <Label Text="Αναζήτηση"/>
+                <Entry Text="{Binding SearchText}" IsEnabled="True" Placeholder="Συμπληρώστε λέξεις κλειδιά"></Entry>
+            </StackLayout>
+            
+            <StackLayout Grid.Row="5">
+                <Button BackgroundColor="#455A63"  ContentLayout="Top,10" TextColor="White" Text="Προσόντα" Command="{Binding OnNavigateCommand}" CommandParameter="QualificationListPage"/>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
